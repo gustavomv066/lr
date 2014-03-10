@@ -1,5 +1,9 @@
 <h3>You are</h3>
 <p>Email: <%= @user.email if @user.email %></p>
 <br>
-Role : <%= @user.role == 2 ? 'admin' : 'normal user' %>
+Role : <% if @user.role == 2 %>
+          <%= render "users/admin" %>
+       <% else %>
+          <%= render "users/normal_user" %>
+       <% end %>
 </br>
