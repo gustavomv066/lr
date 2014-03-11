@@ -13,8 +13,8 @@ class User < ActiveRecord::Base
 
   end
 
-  def get_normal_users collection
-
+  def self.get_users collection, type_user
+    collection = collection.where("role = :type_user ", type_user: type_user )
   end
 
 
