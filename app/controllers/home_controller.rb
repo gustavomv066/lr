@@ -2,7 +2,7 @@ class HomeController < ApplicationController
 
   def index
     @users = User.all
-    @users = User.get_normal_users(@users)
+    @users = User.get_users(@users,2)
   end
 
 end
