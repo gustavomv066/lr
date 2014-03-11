@@ -10,6 +10,11 @@ class User < ActiveRecord::Base
     else
       self.role = 1
     end
+
+  end
+
+  def get_normal_users collection
+
   end
 
 
