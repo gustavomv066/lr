@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @users = User.get_normal_users(@users)
   end
 
   def show

@@ -13,8 +13,8 @@ class User < ActiveRecord::Base
 
   end
 
-  def get_normal_users collection
-
+  def self.get_normal_users collection
+    collection = collection.where("role = '1' ")
   end
 
 
