@@ -7,6 +7,12 @@ Role : <% if @user.role == 2 %>
           <%= render "users/normal_user" %>
        <% end %>
 </br>
+<h4>YOUR GUITARS</h4>
+<% @user.guitars.each do |guitar| %>
+  <%= guitar.name %>
+<% end %>
+
+
 
 <h2>Add a guitar:</h2>
 <%= form_for([@user, @user.guitars.build]) do |f| %>
