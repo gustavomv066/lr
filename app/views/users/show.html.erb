@@ -8,8 +8,8 @@ Role : <% if @user.role == 2 %>
        <% end %>
 </br>
 
-<h2>Add a comment:</h2>
-<%= form_for([@user, @user.guitar.build]) do |f| %>
+<h2>Add a guitar:</h2>
+<%= form_for([@user, @user.guitars.build]) do |f| %>
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
